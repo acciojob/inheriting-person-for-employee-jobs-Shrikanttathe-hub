@@ -6,7 +6,7 @@ class Person{
 }
 
 	greet() {
-		console.log(`Hello, my name is" ${this._name}, I am ${this._age} years old.`);
+		console.log(`Hello, my name is ${this._name}, I am ${this._age} years old.`);
 	}
 }
 
@@ -14,7 +14,7 @@ class Person{
 
 class Employee extends Person{
 	constructor(name, age, jobTitle) {
-	Super(name, age, jobTitle)
+	super(name, age, jobTitle)
 	this.jobtitle = jobTitle;
 }
 jobGreet(){
@@ -23,7 +23,8 @@ jobGreet(){
 }
 
 // Do not change code below this line
-const Person1 = new Person("Alice", 25);
-Person1.greet();
+const person = new Person("Alice", 25);
+const employee = new Employee("Bob", 30);
+person.greet();
 window.Person = Person;
 window.Employee = Employee;
